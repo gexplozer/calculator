@@ -1,0 +1,55 @@
+body {
+    display: block;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.calculator {
+    width: 60%;
+    max-width: 1140px;
+    margin: 0 auto 66px;
+    text-align: center;
+    padding: 0 0 2em 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.calculator div:first-child {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--deepMain);
+    color: var(--fontWhite);
+    padding: 11px 0;
+    margin-bottom: 22px;
+}
+
+.calculator div svg {
+    display: block;
+    position: absolute;
+    font-size: 150px;
+    transform: rotate(45deg);
+    left: -40px;
+    bottom: -10px;
+    opacity: .75;
+}
+
+.calculator h4 {
+    margin-bottom: 22px;
+}
+
+.calculator .button-error {
+    display: block;
+    margin: 1.5em auto;
+}
+.calculator .counted {
+    height: 48px;
+    font-size: 32px;
+    border: none;
+    cursor: auto;
+    color: var(--fontBlack);
+    box-shadow: none;
+    background-color: transparent;
+    text-align: center;
+    width: 100%;
+    margin-top: 22px;
+}
