@@ -17,6 +17,7 @@ function sendData(modalCta) {
 			modalCta.open();
 			modalCta.setContent(message); // Отправили сообщение юзеру
 			setTimeout(function() {modalCta.close();}, timeOut);
+			//common.callback();
 			//var yId = "yaCounter45210351";
 			//yId.reachGoal('ZAKAZANO');
 		},
@@ -27,7 +28,6 @@ function sendData(modalCta) {
 			xhr.open("POST", url, true);
 			xhr.send(data);
 			common.thankYou(); // Спасибо
-			common.callback();
 		},
 
 		sendEmail: function (data) { // отправляем почту через php

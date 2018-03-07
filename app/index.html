@@ -12,7 +12,7 @@
 </head>
 <body>
     <h2>Калькулятор расхода Пенетрона Адмикса</h2>
-    <form class="pure-form calculator calcAdmix" method="get">
+    <form class="pure-form calculator calcAdmix">
         <div>
             <i class="fa fa-calculator" aria-hidden="true"></i>
             <h3>Пенетрон Адмикс</h3>
@@ -52,11 +52,52 @@
         <button class="pure-button button-error getPrice">УЗНАТЬ ЦЕНУ</button>
     </form>
 
+    <h2>Удобный калькулятор расхода Пенетрона</h2>
+    <form class="pure-form calculator calcPenetron">
+        <div>
+            <i class="fa fa-calculator" aria-hidden="true"></i>
+            <h3>Пенетрон</h3>
+            <h4>проникающая гидроизоляция</h4>
+            <h4>Расход Пенетрона: 0,8-1,1 кг на 1 м2</h4>
+        </div>
+    
+        <fieldset onkeyup="calcPenetron.counted(area.value)">
+            <label>Введите площадь обработки:
+                <input name="area" type="text" placeholder="площадь (м²)" value="10">
+            </label>
+            <input class="pure-button button-secondary" name="reset" type="button" onclick="calcPenetron.counted(area.value)"
+                value="OK">
+        </fieldset>
+    
+        <fieldset onkeyup="area.value = length1.value * width1.value; calcPenetron.counted(area.value)">
+            <label>ИЛИ длину и ширину:
+                <input name="length1" type="text" placeholder="длина (м)">
+                <input name="width1" type="text" placeholder="ширина (м)">
+            </label>
+    
+        </fieldset>
+        
+        <span class="counted">0 кг</span>
+        <button class="pure-button button-error getPrice">УЗНАТЬ ЦЕНУ</button>
+    </form>
+
+    <div class="inlineCtaBlock calculatorCta">
+        <form method="post" class="ctaBlock pure-form forma leadData">
+            <div class="calculatedPrice">Ориентировочная цена: <span></span> руб.</div>
+            <h3>Введите номер и мы просчитаем точный расход и цены:</h3>
+            <input class="ctaRequest" type="hidden" name="title" value="Введите номер и мы просчитаем точный расход и цены: | БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ"
+            />
+            <input class="pure-input-rounded" type="text" name="phone" placeholder="Телефон (+7 ...)" required/>
+            <input class="pure-input-rounded" type="text" name="name" placeholder="Имя" />
+            <button class="btn">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</button>
+        </form>
+    </div>
+
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="/js/libs.js"></script>
-    <script src="/js/gaFramework.js"></script>
     <script src="/js/common.js"></script>
+    <script src="/js/gaFramework.js"></script>
     <script src="/js/calculator.js"></script>
 </body>
 </html>
