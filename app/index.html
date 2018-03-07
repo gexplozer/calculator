@@ -74,7 +74,6 @@
                 <input name="length1" type="text" placeholder="длина (м)">
                 <input name="width1" type="text" placeholder="ширина (м)">
             </label>
-    
         </fieldset>
         
         <span class="counted">0 кг</span>
@@ -83,13 +82,14 @@
 
     <div class="inlineCtaBlock calculatorCta">
         <form method="post" class="ctaBlock pure-form forma leadData">
-            <div class="calculatedPrice">Ориентировочная цена: <span></span> руб.</div>
+            <div class="calculatedPrice">Ориентировочная цена: <span>0</span> руб.</div>
             <h3>Введите номер и мы просчитаем точный расход и цены:</h3>
             <input class="ctaRequest" type="hidden" name="title" value="Введите номер и мы просчитаем точный расход и цены: | БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ"
             />
-            <input class="pure-input-rounded" type="text" name="phone" placeholder="Телефон (+7 ...)" required/>
-            <input class="pure-input-rounded" type="text" name="name" placeholder="Имя" />
-            <button class="btn">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</button>
+            <input class="pure-input" type="text" name="phone" placeholder="Телефон (+7 ...)" required/>
+            <input class="pure-input" type="text" name="name" placeholder="Имя" />
+            <button class="pure-button button-success">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</button>
+            <h4 class="discountAlert"></h4>
         </form>
     </div>
 
